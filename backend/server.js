@@ -20,6 +20,10 @@ wss.on('connection', ws => {
         console.log(`Visitor disconnected. Total: ${visitorCount}`);
     });
 });
+app.get("/", (req, res) => {
+    res.send("Backend ishlayapti!");
+});
+
 
 app.use(express.static('../frontend')); // Frontend fayllarini server orqali ko'rsatish
 
